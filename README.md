@@ -18,6 +18,7 @@ For advanced usage:
 ```
 docker run -d \
     -p 8888:8888 \
+    -v /path/to/local/notebooks/:/notebooks \
     kxxoling/jupyter-clojure-docker
 ```
 

@@ -27,7 +27,7 @@ RUN apt update && apt install -yq \
         --uid ${NB_UID} \
 	--home ${HOME} \
 	${NB_USER} && \
-	chown -R ${NB_USER}:${NB_USER} ${HOME}
+    chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 USER ${NB_USER}
 WORKDIR ${HOME}

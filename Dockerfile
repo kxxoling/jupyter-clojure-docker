@@ -10,7 +10,7 @@ ENV CLOJUPYTER_PATH $HOME/clojupyter
 ENV LEIN_ROOT 1
 
 USER root
-RUN apt update && apt install -yq
+RUN apt update && apt install -yq \
         python-pip \
         python-dev \
         build-essential \

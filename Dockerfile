@@ -10,12 +10,12 @@ ENV CLOJUPYTER_PATH $HOME/clojupyter
 ENV LEIN_ROOT 1
 
 USER root
-RUN apt update && apt install -yq \
+RUN apt update && apt install -yq
         python-pip \
-	python-dev \
-	build-essential \
-	curl \
-	git-core \
+        python-dev \
+        build-essential \
+        curl \
+        git-core \
         default-jre && \
     curl -o /etc/ssl/certs/java/cacerts https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/openjdk-9-slim-cacerts && \
     curl -o /usr/local/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && \
@@ -25,8 +25,8 @@ RUN apt update && apt install -yq \
     adduser --disabled-password \
         --gecos "Default user" \
         --uid ${NB_UID} \
-	--home ${HOME} \
-	${NB_USER} && \
+        --home ${HOME} \
+        ${NB_USER} && \
     chown -R ${NB_USER}:${NB_USER} ${HOME}
 
 USER ${NB_USER}

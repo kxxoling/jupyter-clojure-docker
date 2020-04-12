@@ -20,6 +20,6 @@ For advanced usage:
 ```sh
 docker run -d \
     -p 8888:8888 \
-    -v /path/to/local/notebooks/:/notebooks \
+    -v /path/to/local/notebooks/:/home/clojure/notebooks \
     kxxoling/jupyter-clojure-docker
 ```
